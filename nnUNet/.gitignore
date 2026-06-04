@@ -113,4 +113,5 @@ ENV/
 .DS_Store
 
 *.model
+*.pth
 
