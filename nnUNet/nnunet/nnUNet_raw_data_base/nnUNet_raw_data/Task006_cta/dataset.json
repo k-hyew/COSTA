@@ -1,0 +1,23 @@
+{
+    "description": "nothing",
+    "labels": {
+        "0": "background",
+        "1": "artery"
+    },
+    "licence": "Research Only",
+    "modality": {
+        "0": "MRA",
+        "1": "MRA"
+    },
+    "name": "COSTA",
+    "numTest": 2,
+    "numTraining": 0,
+    "reference": "",
+    "release": "1.0",
+    "tensorImageSize": "4D",
+    "test": [
+        "./imagesTs/Dataset000.nii.gz",
+        "./imagesTs/Dataset001.nii.gz"
+    ],
+    "training": []
+}

@@ -8,7 +8,7 @@ License-File: LICENSE
 Requires-Dist: einops
 Requires-Dist: monai
 Requires-Dist: nnunet
-Requires-Dist: torch==2.0.0
+Requires-Dist: torch>=2.0.0
 Requires-Dist: torchio
 Requires-Dist: thop
 Requires-Dist: prettytable

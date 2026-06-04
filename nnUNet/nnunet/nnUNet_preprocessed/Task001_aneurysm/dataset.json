@@ -1,0 +1,31 @@
+{
+    "description": "nothing",
+    "labels": {
+        "0": "background",
+        "1": "artery"
+    },
+    "licence": "Research Only",
+    "modality": {
+        "0": "MRA",
+        "1": "MRA"
+    },
+    "name": "COSTA",
+    "numTest": 10,
+    "numTraining": 0,
+    "reference": "",
+    "release": "1.0",
+    "tensorImageSize": "4D",
+    "test": [
+        "./imagesTs/Dataset000_0000.nii.gz",
+        "./imagesTs/Dataset001_0000.nii.gz",
+        "./imagesTs/Dataset002_0000.nii.gz",
+        "./imagesTs/Dataset003_0000.nii.gz",
+        "./imagesTs/Dataset004_0000.nii.gz",
+        "./imagesTs/Dataset005_0000.nii.gz",
+        "./imagesTs/Dataset006_0000.nii.gz",
+        "./imagesTs/Dataset007_0000.nii.gz",
+        "./imagesTs/Dataset008_0000.nii.gz",
+        "./imagesTs/Dataset009_0000.nii.gz"
+    ],
+    "training": []
+}

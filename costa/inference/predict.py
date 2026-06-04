@@ -574,9 +574,9 @@ def predict_cases_fastest(model, list_of_lists, output_filenames, folds, num_thr
 def check_input_folder_and_return_caseIDs(input_folder, expected_num_modalities):
     print("This model expects %d input modalities for each image" % expected_num_modalities)
     files = subfiles(input_folder, suffix=".nii.gz", join=False, sort=True)
-
+   
     maybe_case_ids = np.unique([i[:-12] for i in files])
-
+    maybe_case_ids = np.array([i for i in maybe_case_ids if i != 'Datas'])
     remaining = deepcopy(files)
     missing = []
 

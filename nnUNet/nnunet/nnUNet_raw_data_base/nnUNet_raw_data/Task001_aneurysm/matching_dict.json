@@ -1,0 +1,12 @@
+{
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20170816_11099529_KYK.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset000.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20171219_28450300_SMA.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset001.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20170802_14819854_JOJ.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset002.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20170811_27529669_KBI.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset003.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20170818_27997589_KMS.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset004.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20171130_28256717_SHS.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset005.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20171215_19650067_LDB.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset006.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20171027_27845936_KKJ.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset007.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20171222_28262534_HCS.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset008.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/aneurysm/20170420_27027372_LYK.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task001_aneurysm/imagesTs/Dataset009.nii.gz"
+}

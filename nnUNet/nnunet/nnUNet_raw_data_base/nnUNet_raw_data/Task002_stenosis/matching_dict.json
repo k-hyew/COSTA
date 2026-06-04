@@ -1,0 +1,12 @@
+{
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/13277349_LGW_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset000.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/10844562_LYS_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset001.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/13513906_LGJ_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset002.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/10366745_YBS_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset003.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/13657572_KSH_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset004.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/12327289_SJK_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset005.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/12611287_SJT_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset006.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/11697017_YJH_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset007.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/13997357_CJS_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset008.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/SNUBH/stenosis/12392012_KJI_401_3d_tof_4m_stroke.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task002_stenosis/imagesTs/Dataset009.nii.gz"
+}

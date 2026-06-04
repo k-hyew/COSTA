@@ -22,7 +22,7 @@ def find_task_name_from_task_id(task_id):
     all_task_dirs = listdir(nnunet_raw_data)
     target_task = None
     for tpe in all_task_dirs:
-        if tpe.startswith("Task" + str(task_id) + "_"):
+        if tpe.startswith("Task%03.0d" % task_id + "_"):
             target_task = tpe
     if target_task is None:
         raise ValueError("Cannot find target task based on task id %d" % task_id)

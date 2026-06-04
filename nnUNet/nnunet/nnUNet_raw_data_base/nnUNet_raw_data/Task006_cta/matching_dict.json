@@ -1,0 +1,4 @@
+{
+  "/home/nearbrain-infer/dnf_ai/datasets/private/UPenn/cta/UPenn_aneurysm_CTA.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task006_cta/imagesTs/Dataset000.nii.gz",
+  "/home/nearbrain-infer/dnf_ai/datasets/private/UPenn/cta/UPenn_iih_3D-DSA_Artery.nii.gz": "/home/nearbrain-infer/dnf_ai/test_seg/models/COSTA/nnUNet/nnunet/nnUNet_raw_data_base/nnUNet_raw_data/Task006_cta/imagesTs/Dataset001.nii.gz"
+}
