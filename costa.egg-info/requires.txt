@@ -1,0 +1,10 @@
+einops
+monai
+nnunet
+torch==2.0.0
+torchio
+thop
+prettytable
+rich
+openpyxl
+numpy==1.23.2

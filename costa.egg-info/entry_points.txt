@@ -1,0 +1,10 @@
+[console_scripts]
+COSTA_brain_extraction = costa.preprocessing.bet2.skull_stripping:main
+COSTA_convert_dataset = costa.dataset_conversion.COSTA_dataset_convert:main
+COSTA_eval = costa.run.run_evaluation:main
+COSTA_plan_and_preprocess = costa.experiment_planning.COSTA_plan_and_preprocess:main
+COSTA_plan_inference_input = costa.inference.plan_inference_input:main
+COSTA_predict = costa.inference.predict_sample:main
+COSTA_standardization = costa.preprocessing.hist_standardization.intensity_hist_stand:main
+COSTA_train = costa.run.run_training:main
+COSTA_train_landmarks = costa.preprocessing.hist_standardization.train_landmarks:main
