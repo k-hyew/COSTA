@@ -12,18 +12,17 @@
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
 
-import nnunet
 import torch
 from batchgenerators.utilities.file_and_folder_operations import *
 import importlib
 import pkgutil
-from nnunet.training.network_training.nnUNetTrainer import nnUNetTrainer
+from costa.training.nnUNetTrainer import nnUNetTrainer
+import costa
 
 
 def recursive_find_python_class(folder, trainer_name, current_module):
     tr = None
     for importer, modname, ispkg in pkgutil.iter_modules(folder):
-        # print(modname, ispkg)
         if not ispkg:
             m = importlib.import_module(current_module + "." + modname)
             if hasattr(m, trainer_name):
@@ -34,7 +33,8 @@ def recursive_find_python_class(folder, trainer_name, current_module):
         for importer, modname, ispkg in pkgutil.iter_modules(folder):
             if ispkg:
                 next_current_module = current_module + "." + modname
-                tr = recursive_find_python_class([join(folder[0], modname)], trainer_name, current_module=next_current_module)
+                tr = recursive_find_python_class([join(folder[0], modname)], trainer_name,
+                                                 current_module=next_current_module)
             if tr is not None:
                 break
 
@@ -56,8 +56,8 @@ def restore_model(pkl_file, checkpoint=None, train=False, fp16=None):
     info = load_pickle(pkl_file)
     init = info['init']
     name = info['name']
-    search_in = join(nnunet.__path__[0], "training", "network_training")
-    tr = recursive_find_python_class([search_in], name, current_module="nnunet.training.network_training")
+    search_in = join(costa.__path__[0], "training")
+    tr = recursive_find_python_class([search_in], name, current_module="costa.training")
 
     if tr is None:
         """
@@ -71,10 +71,11 @@ def restore_model(pkl_file, checkpoint=None, train=False, fp16=None):
             pass
 
     if tr is None:
-        raise RuntimeError("Could not find the model trainer specified in checkpoint in nnunet.trainig.network_training. If it "
-                           "is not located there, please move it or change the code of restore_model. Your model "
-                           "trainer can be located in any directory within nnunet.trainig.network_training (search is recursive)."
-                           "\nDebug info: \ncheckpoint file: %s\nName of trainer: %s " % (checkpoint, name))
+        raise RuntimeError(
+            "Could not find the model trainer specified in checkpoint in nnunet.trainig.network_training. If it "
+            "is not located there, please move it or change the code of restore_model. Your model "
+            "trainer can be located in any directory within nnunet.trainig.network_training (search is recursive)."
+            "\nDebug info: \ncheckpoint file: %s\nName of trainer: %s " % (checkpoint, name))
     assert issubclass(tr, nnUNetTrainer), "The network trainer was found but is not a subclass of nnUNetTrainer. " \
                                           "Please make it so!"
 
@@ -129,7 +130,7 @@ def load_model_and_checkpoint_files(folder, folds=None, mixed_precision=None, ch
         assert all([isdir(i) for i in folds]), "list of folds specified but not all output folders are present"
     elif isinstance(folds, int):
         folds = [join(folder, "fold_%d" % folds)]
-        assert all([isdir(i) for i in folds]), "output folder missing for %s" % folds[0]
+        assert all([isdir(i) for i in folds]), "output folder missing for fold %d" % folds
     elif folds is None:
         print("folds is None so we will automatically look for output folders (not using \'all\'!)")
         folds = subfolders(folder, prefix="fold")
@@ -144,7 +145,7 @@ def load_model_and_checkpoint_files(folder, folds=None, mixed_precision=None, ch
     trainer.initialize(False)
     all_best_model_files = [join(i, "%s.model" % checkpoint_name) for i in folds]
     print("using the following model files: ", all_best_model_files)
-    all_params = [torch.load(i, map_location=torch.device('cpu'), weights_only=False) for i in all_best_model_files]
+    all_params = [torch.load(i, map_location=torch.device('cpu')) for i in all_best_model_files]
     return trainer, all_params
 
 

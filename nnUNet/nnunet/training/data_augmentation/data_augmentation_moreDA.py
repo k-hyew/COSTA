@@ -82,10 +82,11 @@ def get_moreDA_augmentation(dataloader_train, dataloader_val, patch_size, params
 
     # we need to put the color augmentations after the dummy 2d part (if applicable). Otherwise the overloaded color
     # channel gets in the way
-    tr_transforms.append(GaussianNoiseTransform(p_per_sample=0.1))
-    tr_transforms.append(GaussianBlurTransform((0.5, 1.), different_sigma_per_channel=True, p_per_sample=0.2,
-                                               p_per_channel=0.5))
-    tr_transforms.append(BrightnessMultiplicativeTransform(multiplier_range=(0.75, 1.25), p_per_sample=0.15))
+    tr_transforms.append(GaussianNoiseTransform(p_per_sample=0.35))  # p=0.1 -> p=0.35
+    tr_transforms.append(GaussianBlurTransform((0.5, 1.), different_sigma_per_channel=True, p_per_sample=0.35,
+                                               p_per_channel=0.5))  # p=0.2 -> p=0.35
+    # p=0.15 -> p=0.35
+    tr_transforms.append(BrightnessMultiplicativeTransform(multiplier_range=(0.75, 1.25), p_per_sample=0.35))
 
     if params.get("do_additive_brightness"):
         tr_transforms.append(BrightnessTransform(params.get("additive_brightness_mu"),
@@ -93,11 +94,11 @@ def get_moreDA_augmentation(dataloader_train, dataloader_val, patch_size, params
                                                  True, p_per_sample=params.get("additive_brightness_p_per_sample"),
                                                  p_per_channel=params.get("additive_brightness_p_per_channel")))
 
-    tr_transforms.append(ContrastAugmentationTransform(p_per_sample=0.15))
+    tr_transforms.append(ContrastAugmentationTransform(p_per_sample=0.35))  # p=0.15 -> p=0.35
     tr_transforms.append(SimulateLowResolutionTransform(zoom_range=(0.5, 1), per_channel=True,
                                                         p_per_channel=0.5,
-                                                        order_downsample=0, order_upsample=3, p_per_sample=0.25,
-                                                        ignore_axes=ignore_axes))
+                                                        order_downsample=0, order_upsample=3, p_per_sample=0.5,
+                                                        ignore_axes=ignore_axes))  # p=0.25 -> p=0.5
     tr_transforms.append(
         GammaTransform(params.get("gamma_range"), True, True, retain_stats=params.get("gamma_retain_stats"),
                        p_per_sample=0.1))  # inverted gamma
@@ -207,4 +208,3 @@ def get_moreDA_augmentation(dataloader_train, dataloader_val, patch_size, params
     # batchgenerator_val = SingleThreadedAugmenter(dataloader_val, val_transforms)
 
     return batchgenerator_train, batchgenerator_val
-
