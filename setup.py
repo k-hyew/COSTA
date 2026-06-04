@@ -10,7 +10,7 @@ setup(name='costa',
           "einops",
           "monai",
           "nnunet",
-          "torch==2.0.0",
+          "torch>=2.0.0",  # modify
           "torchio",
           "thop",
           "prettytable",
